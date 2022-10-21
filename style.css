@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.imageSection {
+    height: 100vh;
+    min-width: 40vw;
+}
+
+.imageSection > img {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.credit {
+    position: relative;
+    top: -3em;
+    z-index: 1;
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-right: 1em;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.credit > a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    height: 100%;
+    background-color: #F9F4F4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 2em;
+}
+
+.formContainer {
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+    height: 40vh;
+    box-shadow: 1px 1px 7px gray;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: overline underline;
+    height: 20vh;
+    padding-top: 10vh;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+.formSignup {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 1em;
+    column-gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: auto auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.item > input {
+    height: 2em;
+    width: 20em;
+}
+
+.instruction {
+    margin: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.instruction > button {
+    height: 3em;
+    width: 10em;
+    background-color: #4E4747;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
