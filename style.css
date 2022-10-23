@@ -6,15 +6,16 @@
 
 html, body {
     display: flex;
-    min-height: 100vh;
+    height: 100%;
+    min-width: 100%;
 }
 
 .imageSection {
-    height: 100vh;
+    height: 100%;
     min-width: 40vw;
 }
 
-.imageSection > img {
+.customImage {
     padding: 0;
     margin: 0;
     height: 100%;
@@ -33,12 +34,13 @@ html, body {
     justify-content: center;
     padding-right: 1em;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .credit > a {
-    color: white;
-    text-decoration: none;
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .content {
@@ -48,36 +50,38 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     row-gap: 2em;
-}
-
-.formContainer {
-    padding: 2em;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #FFFFFF;
-    height: 40vh;
-    box-shadow: 1px 1px 7px gray;
+    flex-grow: 1;
 }
 
 h2 {
     text-align: center;
     text-decoration: overline underline;
-    height: 20vh;
-    padding-top: 10vh;
-}
-
-h3 {
-    font-size: 1.2em;
+    height: 25vh;
+    padding-top: 15vh;
 }
 
 .formSignup {
+    width: 100%;
+}
+
+fieldset {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     row-gap: 1em;
     column-gap: 1em;
-    justify-content: space-between;
-    align-items: center;
-    grid-template-columns: auto auto;
+    background-color: #FFFFFF;
+    border: none;
+    padding: 2em;
+    box-shadow: 1px 1px 7px gray;
+}
+
+legend {
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: pink;
+    border-radius: 2em;
 }
 
 .item {
@@ -106,5 +110,52 @@ h3 {
     border: none;
     font-size: 15px;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1010px) {
+    html, body {
+        height: auto;
+    }
+
+    .imageSection {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        transform: translateY(10vmin);
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    html, body {
+        min-height: auto;
+    }
+
+    .imageSection {
+        width: 100%;
+        height: auto;
+    }
+
+    .item > input {
+        height: 2em;
+        width: auto;
+    }
+
+    .credit {
+        display: none;
+    }
+    
+    .content {
+        height: 80vw;
+    }
+
+    h2 {
+        height: 10vmin;
+        padding-top: 1em;
+    }
 }
 

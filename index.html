@@ -15,37 +15,39 @@
     <div class="content">
         <h2>Glam Beauty</h2>
         <div class="formContainer">
-            <h3>Sign up</h3>
             <form class="formSignup">
-                <div class="firstName item">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName">
-                </div>
-                <div class="lastName item">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName">
-                </div>
-                <div class="emailId item">
-                    <label for="emailId">Email ID</label>
-                    <input type="email" id="emailId">
-                </div>
-                <div class="phoneNumber item">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="number" id="phoneNumber">
-                </div>
-                <div class="passWord item">
-                    <label for="passWord">Password</label>
-                    <input type="password" id="passWord">
-                </div>
-                <div class="confirmPassWord item">
-                    <label for="confirmPassWord">Confirm Password</label>
-                    <input type="password" id="confirmPassWord">
-                </div>
+                <fieldset>
+                    <legend>Sign Up</legend>
+                    <div class="firstName item">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="Your First Name" required>
+                    </div>
+                    <div class="lastName item">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Your Last Name" required>
+                    </div>
+                    <div class="emailId item">
+                        <label for="emailId">Email ID</label>
+                        <input type="email" id="emailId" placeholder="YourEmail@gmail.com" required>
+                    </div>
+                    <div class="phoneNumber item">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="number" id="phoneNumber" placeholder="762516190">
+                    </div>
+                    <div class="passWord item">
+                        <label for="passWord">Password</label>
+                        <input type="password" id="passWord" minlength="6" placeholder="Your password" required>
+                    </div>
+                    <div class="confirmPassWord item">
+                        <label for="confirmPassWord">Confirm Password</label>
+                        <input type="password" id="confirmPassWord" minlength="6" placeholder="Confirm your password" required>
+                    </div>
+                </fieldset>
+                <div class="instruction">
+                    <button type="submit">Create Account</button>
+                    <p>Already have an account? <a href="">Log in</a></p>
+                </div>    
             </form>
-        </div>
-        <div class="instruction">
-            <button>Create Account</button>
-            <p>Already have an account? <a href="">Log in</a></p>
         </div>
     </div>
 </body>
